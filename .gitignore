@@ -1,23 +1,10 @@
-Entornos Python,
-pycache/
-*.pyc
-*.pyo
-*.pyd
-env/
-venv/
-ENV/
-
-Archivos y carpetas de Node.js y Tailwind,
+#Node.js,
 node_modules/
 
-CSS compilado (no guardar css generado),
-static/dist/
+#Python,
+pycache/
+*.pyc
 
-Logs, bases de datos, etc,
-*.log
-*.sqlite3
+#Entorno virtual,
+venv/
 .env
-
-Archivos de sistema (mac, windows),
-.DS_Store
-Thumbs.db
