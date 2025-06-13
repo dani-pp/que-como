@@ -1,0 +1,14 @@
+[
+    {
+      "id-receta":"r-01",
+      "id-usuario":1,
+      "titulo":"handroll",
+      "descripcion":"quiero comer muchos handrolls"
+    },
+    {
+      "id-receta":"r-02",
+      "id-usuario":2,
+      "titulo":"hamburguesa",
+      "descripcion":"la verdad es que tambien me gustan mucho las hamburguesas"
+    }
+]

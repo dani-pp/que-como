@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¿Qué como?</title>
+  <link href="{{ url_for('static', filename='icon1.png') }}" rel="icon" />
+  <!-- Tailwind CSS -->
+  <link href="{{ url_for('static', filename='tailwind/output.css') }}" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+  <style>
+  :root {
+    --color-reseda-green: #65743A;
+    --color-nyanza: #c8ead3;
+  }
+  </style>
+</head>
+
+<body class="bg-yellow-100 m-0">
+  <header class="bg-yellow-500 flex">
+    <a href="{{ url_for('index') }}"><img id="logo-title-img" src="{{ url_for('static', filename='logo-title-nobg.png') }}"
+      class="w-[250px] pt-2 pb-2"
+    /></a>
+    <nav
+      class="flex border border-black ml-auto mr-[5vw] gap-[7vw] items-center"
+    >
+      <a href="#iniciar-sesion" class="no-underline text-white font-semibold ml-[5px]"
+        >Iniciar Sesión</a
+      >
+      <a href="#ver-recetas" class="no-underline text-white font-semibold ml-[5px]"
+        >Ver Recetas</a
+      >
+      <a href="#faq" class="no-underline text-white font-semibold ml-[5px]">FAQ</a>
+      <a href="#contacto" class="no-underline text-white font-semibold ml-[5px]"
+        >Contáctanos</a
+      >
+    </nav>
+  </header>
+
+  <main>
+    <div id="titular" class="text-center">
+      <h1 class="text-center mt-[25px] text-reseda-green-100 text-[4em] font-semibold">Encuentra tu nueva receta favorita 👨‍🍳</h1>
+      <div
+        id="titular-texto"
+        class="rounded-xl bg-yellow-50 mx-auto mt-[50px] mb-[30px] w-[70vw] text-[3.5vh] p-7 shadow-2xl pad"
+      >
+        <p class="font-medium">
+          En <b class="text-green-500">Que Cómo</b>, creemos que comer bien no debería ser un desafío.
+          Nuestra plataforma te ayuda a encontrar y compartir
+          <b class="text-green-500">recetas adaptadas a tus necesidades</b>, desde opciones para
+          condiciones gástricas particulares hasta soluciones para intolerancias
+          y alergias. Aquí, la comida se transforma en bienestar.<br /><br />
+          Explora un mundo de sabores sin preocupaciones. Con
+          <b class="text-green-500">filtros personalizados y una comunidad</b> dispuesta a ayudar,
+          descubrirás platos deliciosos sin renunciar a tu salud. En
+          <b class="text-green-500">Que Cómo</b>, comer seguro es fácil, variado y siempre disfrutable.
+        </p>
+      </div>
+    </div>
+    <!-- Swiper -->
+    <div id="contenedor-recetas-populares"
+          class="mt-[200px]">
+      <h2 class="text-center text-3xl mb-[60px] font-semibold">Da un vistazo a las recetas más populares del momento</h2>
+    <div
+      class="swiper mySwiper max-w-4xl mx-auto my-10 rounded-lg"
+    >
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ">
+          <img
+            src="https://cdn0.expertoanimal.com/es/posts/1/6/1/gato_munchkin_25161_8_600.jpg"
+            alt="Imagen 1"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://cdn0.expertoanimal.com/es/posts/1/6/1/gato_munchkin_25161_8_600.jpg"
+            alt="Imagen 2"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://cdn0.expertoanimal.com/es/posts/1/6/1/gato_munchkin_25161_8_600.jpg"
+            alt="Imagen 3"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="https://cdn0.expertoanimal.com/es/posts/1/6/1/gato_munchkin_25161_8_600.jpg"
+            alt="Imagen 4"
+          />
+        </div>
+      </div>
+      <!-- Flechas -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+     </div>
+
+    <div>
+      {% for receta in recetas %}
+      <div class="border border-dashed border-black">
+        <strong>{{ receta['titulo'] }}</strong>: {{ receta['descripcion'] }}
+      </div>
+      {% endfor %}
+    </div>
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Tu script personalizado -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
