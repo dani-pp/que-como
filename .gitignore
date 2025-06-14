@@ -2,7 +2,7 @@
 node_modules/
 
 #Python,
-pycache/
+__pycache__/
 *.pyc
 
 #Entorno virtual,
