@@ -22,21 +22,25 @@
 </head>
 
 <body class="bg-yellow-100 m-0">
-  <header class="bg-yellow-500 flex">
-    <a href="{{ url_for('index') }}"><img id="logo-title-img" src="{{ url_for('static', filename='logo-title-nobg.png') }}"
+  <header class="bg-yellow-500 flex shadow-md">
+
+    <a href="{{ url_for('index') }}">
+      <img id="logo-title-img" src="{{ url_for('static', filename='logo-title-nobg.png') }}"
       class="w-[250px] pt-2 pb-2"
     /></a>
     <nav
-      class="flex border border-black ml-auto mr-[5vw] gap-[7vw] items-center"
+      class="flex ml-auto mr-[5vw] gap-[7vw] items-center"
     >
-      <a href="#iniciar-sesion" class="no-underline text-white font-semibold ml-[5px]"
+      <a href="{{ url_for('iniciarSesion') }}" class="no-underline text-gray-900 font-semibold ml-[5px] hover:text-yellow-50 hover:scale-110 hover:duration-200 hover:ease-in-out0"
         >Iniciar Sesión</a
       >
-      <a href="#ver-recetas" class="no-underline text-white font-semibold ml-[5px]"
+      <a href="{{ url_for('verRecetas') }}" class="no-underline text-gray-900 font-semibold ml-[5px] hover:text-yellow-50 hover:scale-110 hover:duration-200 hover:ease-in-out"
         >Ver Recetas</a
       >
-      <a href="#faq" class="no-underline text-white font-semibold ml-[5px]">FAQ</a>
-      <a href="#contacto" class="no-underline text-white font-semibold ml-[5px]"
+      <a href="{{ url_for('faq') }}" class="no-underline text-gray-900 font-semibold ml-[5px] hover:text-yellow-50 hover:scale-110 hover:duration-200 hover:ease-in-out">
+        FAQ</a
+      >
+      <a href="{{ url_for('contacto') }}" class="no-underline text-gray-900 font-semibold ml-[5px] hover:text-yellow-50 hover:scale-110 hover:duration-200 hover:ease-in-out"
         >Contáctanos</a
       >
     </nav>
@@ -49,6 +53,7 @@
         id="titular-texto"
         class="rounded-xl bg-yellow-50 mx-auto mt-[50px] mb-[30px] w-[70vw] text-[3.5vh] p-7 shadow-2xl pad"
       >
+        
         <p class="font-medium">
           En <b class="text-green-500">Que Cómo</b>, creemos que comer bien no debería ser un desafío.
           Nuestra plataforma te ayuda a encontrar y compartir
@@ -109,6 +114,7 @@
       {% endfor %}
     </div>
   </main>
+
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
