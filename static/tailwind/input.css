@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .text-shadow-white {
+    text-shadow: 0 0 10px rgb(222, 224, 208);
+  }
+  .hover\:text-shadow-white:hover {
+    text-shadow: 0 0 10px rgb(222, 224, 208);
+  }
+}
+
+@theme {
+  --color-midnight: #121063;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+}
