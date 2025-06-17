@@ -1,17 +1,13 @@
 from flask import Flask, render_template
 from pymongo import MongoClient
 from dotenv import load_dotenv
-from routes.iniciarSesion import IniciarSesion_route
+from routes.iniciarSesion import iniciarSesion_route
 import os
 load_dotenv()
 
 app = Flask(__name__)
 app.register_blueprint(iniciarSesion_route)
-mongo_uri=os.getenv('MONGO_URI')
-client=MongoClient(mongo_uri)
-db=client.get_default_database()
-usuarios = db['usuarios']
-recetas = db['recetas']
+
 
 #@app.route('/')
 #def inicio():
