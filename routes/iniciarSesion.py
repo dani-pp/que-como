@@ -23,6 +23,7 @@ def validarUsuario():
     })
 
     if usuario_encontrado:
+        nombre = nombre.usuario(usuario_encontrado)
         return render_template('prueba1.html')
     else:
         return render_template('prueba2.html')
