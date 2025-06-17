@@ -17,9 +17,9 @@
         <h1 class="text-center mt-[18%] mb-10 font-bold text-4xl">Inicia Sesión</h1>
         <img class="w-48 justify-self-center mb-7" src="{{url_for('static', filename='logo-nobg.png')}}">
         <form method="post" action="{{url_for('validar-usuario')}}" class="">
-            <input type="email" placeholder="Ingresa tu email" class="border-2 border-gray-500 rounded-3xl w-90 h-12 pl-10 mb-3" required name="input-email">
+            <input type="email" placeholder="Ingresa tu email" class="border-2 border-gray-500 rounded-3xl w-90 h-12 pl-10 mb-3" required name="inputEmail">
             <br>
-            <input type="password" placeholder="************" class="border-2 border-gray-500 rounded-3xl w-90 h-12 pl-10" required name="input-pass">
+            <input type="password" placeholder="************" class="border-2 border-gray-500 rounded-3xl w-90 h-12 pl-10" required name="inputPass">
             <br>
               <div class="flex justify-center mt-1.5">
                 <input type="checkbox" class="mb-9 mt-4 align-middle" name="input-recuerdame">
